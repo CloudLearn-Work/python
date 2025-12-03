@@ -1,11 +1,12 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
+# Example route
 @app.route('/')
 def home():
-    return "Hello, Azure!"
+    return "Hello, Azure App Service!"
 
-if __name__ == "__main__":
-    app.run()  # This line is not needed when using Gunicorn
-
+if __name__ == '__main__':
+    app.run(debug=True)
