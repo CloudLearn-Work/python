@@ -1,5 +1,10 @@
-Flask==2.1.0
-gunicorn==23.0.0
-werkzeug==2.0.3
-python-dotenv==0.19.2   # if you're using .env files for configuration
+Flask==2.2.3           # Flask web framework
+Werkzeug==2.0.3        # Werkzeug version compatible with Flask 2.x (this fixes the import error you encountered)
+gunicorn==20.1.0       # WSGI server for production
+Flask-SQLAlchemy==2.5.1 # If using a database with SQLAlchemy
+Flask-Migrate==3.1.0    # For database migrations (if used)
+Flask-Cors==3.1.1       # If your app needs to handle cross-origin resource sharing
+Flask-Login==0.6.2      # If you need user authentication
+Flask-WTF==0.15.1       # For handling forms in Flask
+
 
