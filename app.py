@@ -1,11 +1,11 @@
 from flask import Flask
-import os
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return "Hello, Azure Web Apps! Your Python app is running."
+def home():
+    return "Hello, Azure!"
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))
+    app.run()  # This line is not needed when using Gunicorn
+
